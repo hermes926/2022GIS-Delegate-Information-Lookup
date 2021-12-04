@@ -1,10 +1,14 @@
-.App {
-  text-align: center;
+.APP {
+  font-family: Georgia, serif;
+  /* background-color: rgb(31, 76, 129); */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  width: 80%;
+}
+
+.card {
+  width: 80%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
