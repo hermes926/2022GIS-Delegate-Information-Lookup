@@ -1,0 +1,26 @@
+.card {
+    width: 100%;
+}
+
+.blue {
+    color: white;
+    background-color: yellowgreen;
+}
+.blue-green {
+    color: white;
+    background-color: darkcyan;
+}
+.green {
+    color: white;
+    background-color: darkblue;
+}
+
+.purple {
+    color: white;
+    background-color: darkslateblue;
+}
+
+.black {
+    color: white;
+    background-color: lightblue;
+}

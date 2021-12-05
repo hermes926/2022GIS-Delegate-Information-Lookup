@@ -1,6 +1,7 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
 import { Container, Card, Form, Row, Col, Button } from 'react-bootstrap';
+import { getCookie, setCookie } from "../../tools/cookie";
 import './Login.css';
 
 interface LoginPageState {
@@ -19,7 +20,8 @@ class Login extends React.Component<{}, LoginPageState> {
   }
 
   onSubmit = () => {
-    this.setState({redirect: "/info/" + this.state.Code});
+    setCookie("GISCode", this.state.Code, 30);
+    this.setState({redirect: "/info" });
   }
 
 
@@ -34,7 +36,7 @@ class Login extends React.Component<{}, LoginPageState> {
           <h2 className="title px-2 py-2"> Welcome to GIS 2022!</h2>
         </Row>
         <Row>
-          <Card body border="info" className="px-2 card">
+          <Card body className="px-2 card">
             <Card.Title>Please enter your GIS code</Card.Title>
             <Row>
               <Col xs={9}>
@@ -49,7 +51,7 @@ class Login extends React.Component<{}, LoginPageState> {
               </Form>
               </Col>
               <Col> 
-                <Button variant="outline-info" onClick={() => this.onSubmit()}>Submit</Button>
+                <Button variant="outline-primary" onClick={() => this.onSubmit()}>Submit</Button>
               </Col>
             </Row>
           </Card>
