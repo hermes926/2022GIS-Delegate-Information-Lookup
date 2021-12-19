@@ -4,7 +4,11 @@ import { Container, Card, Form, Row, Col, Button } from 'react-bootstrap';
 import { getCookie } from "../../tools/cookie";
 import './Schedule.css';
 import PersonInfo from "./PersonInfo";
-import DailyInfo from "./DailyInfo";
+import DailyInfo1 from "./DailyInfo1";
+import DailyInfo2 from "./DailyInfo2";
+import DailyInfo3 from "./DailyInfo3";
+import DailyInfo4 from "./DailyInfo4";
+import DailyInfo5 from "./DailyInfo5";
 
 interface SchedulePageState {
     Code: string | undefined;
@@ -52,19 +56,19 @@ class Schedule extends React.Component<{}, SchedulePageState> {
             <PersonInfo />
           </Row>
           <Row className="py-2 px-2">
-            <DailyInfo day={1}/>
+            <DailyInfo1 day={1}/>
           </Row>
           <Row className="py-2 px-2">
-            <DailyInfo day={2}/>
+            <DailyInfo2 day={2}/>
           </Row>
           <Row className="py-2 px-2">
-            <DailyInfo day={3}/>
+            <DailyInfo3 day={3}/>
           </Row>
           <Row className="py-2 px-2">
-            <DailyInfo day={4}/>
+            <DailyInfo4 day={4}/>
           </Row>
           <Row className="py-2 px-2">
-            <DailyInfo day={5}/>
+            <DailyInfo5 day={5}/>
           </Row>
           
         </Container>

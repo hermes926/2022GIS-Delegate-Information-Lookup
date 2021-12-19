@@ -5,7 +5,7 @@ import { getCookie } from '../../tools/cookie';
 import  EventComponent from './EventComponent';
 import "./Schedule.css"
 
-const DailyInfo = (props: any) => {
+const DailyInfo5 = (props: any) => {
     const Code = getCookie("GISCode");
     return (
         <>
@@ -25,6 +25,6 @@ const DailyInfo = (props: any) => {
     );
 };
 
-export default DailyInfo;
+export default DailyInfo5;
 
 

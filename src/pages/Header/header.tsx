@@ -26,6 +26,9 @@ const Header = () => {
                             <Nav.Item style={{ marginLeft: '1%' }}>
                                 <Nav.Link href="/info">Schedule</Nav.Link>
                             </Nav.Item>
+                            <Nav.Item style={{ marginLeft: '1%' }}>
+                                <Nav.Link href="/map">Map</Nav.Link>
+                            </Nav.Item>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

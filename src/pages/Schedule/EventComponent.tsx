@@ -12,7 +12,7 @@ const EventComponent = (props: any) => {
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>{props.Time} {props.Event}</Accordion.Header>
                     <Accordion.Body className={props.Color}>
-                     {props.Place} {props.Room}
+                     At {props.Room}, {props.Place} {props.Floor}
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
