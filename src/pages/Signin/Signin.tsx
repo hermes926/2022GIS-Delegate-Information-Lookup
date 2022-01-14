@@ -9,14 +9,14 @@ interface SigninState {
 class Signin extends React.Component<{}, SigninState> {
   constructor(props: SigninState) {
     super(props);
-    this.setState({
+    this.state = {
       GISCode: undefined,
-    });
+    };
   }
 
   componentDidMount = async () => {
     var GIScodet = '';
-    var url = window.location.pathname.split('/');
+    var url = window.location.hash.split('/');
     if(url.length > 2){
       GIScodet = url[2];
       const { GoogleSpreadsheet } = require('google-spreadsheet');
@@ -31,7 +31,7 @@ class Signin extends React.Component<{}, SigninState> {
         var rows = await sheet.getRows();
         rows = rows.filter((row: any) => {return (row.GISCode === GIScodet);});
         if(rows.length !== 1){
-          this.setState({GISCode: undefined});
+          this.state = {GISCode: undefined};
         }else{
           rows[0].Signup = 'V';
           rows[0].Timestamp = Date().toLocaleString();
