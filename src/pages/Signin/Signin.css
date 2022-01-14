@@ -1,0 +1,14 @@
+.APP {
+  font-family: Georgia, serif;
+  padding-top: 2%;
+  /* background-color: rgb(31, 76, 129); */
+}
+
+.container {
+  width: 80%;
+}
+
+.card {
+  width: 80%;
+}
+

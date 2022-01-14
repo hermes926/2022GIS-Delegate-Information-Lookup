@@ -85,8 +85,10 @@ class Schedule extends React.Component<{}, SchedulePageState> {
 
         this.setState({Info: Info, Code: Info.Code});
       }else{
+        alert("Please enter a valid GIS code!");
+        window.location.pathname = '/';
         this.setState({Code: undefined});
-        alert("Invalid GIScode!\n");
+        
       }
       console.log(rows);
     }
