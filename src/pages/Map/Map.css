@@ -1,0 +1,20 @@
+.APP {
+  font-family: Georgia, serif;
+  padding-top: 2%;
+  /* background-color: rgb(31, 76, 129); */
+}
+
+.container {
+  width: 80%;
+}
+
+.mapcard {
+  width: 80%;
+  height: 100rem;
+}
+
+.map {
+  width: 100%;
+  height: 90rem;
+}
+

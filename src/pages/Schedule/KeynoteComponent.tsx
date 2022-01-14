@@ -4,7 +4,7 @@ import { Accordion } from 'react-bootstrap';
 import { getCookie } from '../../tools/cookie';
 import "./Schedule.css"
 
-const EventComponent = (props: any) => {
+const KeynoteComponent = (props: any) => {
     const Code = getCookie("GISCode");
     return (
         <>
@@ -12,14 +12,17 @@ const EventComponent = (props: any) => {
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>{props.Time} {props.Event}</Accordion.Header>
                     <Accordion.Body className={props.Place}>
-                     At {props.Room}, {props.Place}
+                        Topic: {props.Topic} <br />
+                        At {props.Place} <br />
+                        Slido Link: 
                     </Accordion.Body>
+
                 </Accordion.Item>
             </Accordion>
         </>
     );
 };
 
-export default EventComponent;
+export default KeynoteComponent;
 
 

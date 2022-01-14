@@ -2,25 +2,36 @@
     width: 100%;
 }
 
-.blue {
+.NTU {
     color: white;
     background-color: yellowgreen;
 }
-.blue-green {
+.Zonghe {
     color: white;
     background-color: darkcyan;
 }
-.green {
+.Taipei {
     color: white;
     background-color: darkblue;
 }
 
-.purple {
+.Songshan {
+    color: white;
+    background-color: darkblue;
+}
+
+
+.First {
     color: white;
     background-color: darkslateblue;
 }
 
-.black {
+.Terminal {
     color: white;
     background-color: lightblue;
+}
+
+.Tseng {
+    color: black;
+    background-color: lightblue;    
 }
