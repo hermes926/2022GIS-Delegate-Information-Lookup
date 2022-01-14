@@ -3,6 +3,8 @@ import React from 'react';
 import { Accordion } from 'react-bootstrap';
 import { getCookie } from '../../tools/cookie';
 import  EventComponent from './EventComponent';
+import KeynoteComponent from './KeynoteComponent';
+import PanelComponent from './PanelComponent';
 import "./Schedule.css"
 
 const DailyInfo2 = (props: any) => {
@@ -13,11 +15,9 @@ const DailyInfo2 = (props: any) => {
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>Your Day {props.day} Schedule</Accordion.Header>
                     <Accordion.Body>
-                        <EventComponent Time="9:00 - 12:00" Event="Opening Ceremony" Room="101" Place="Gong-Tong Teaching Building" Color="blue"/>
-                        <EventComponent Time="12:00 - 13:00" Event="Action Project" Room="101" Place="Gong-Tong Teaching Building" Color="blue-green"/>
-                        <EventComponent Time="13:00 - 14:00" Event="Culture Festival" Room="101" Place="Gong-Tong Teaching Building" Color="green"/>
-                        <EventComponent Time="14:00 - 16:00" Event="Panel Discussion" Room="101" Place="Gong-Tong Teaching Building" Color="purple"/>
-                        <EventComponent Time="16:00 - 17:00" Event="Break" Room="International Conference Room" Place="Main Library" Color="black"/>
+                        <KeynoteComponent Time="9:00 - 11:00" Event="Keynote Speech" Place={props.Day2Speech}  Topic={props.Speech1}/>
+                        <PanelComponent Time="11:00 - 12:00" Event="Panel Discussion" Place={props.Day2Speech} />
+                        <EventComponent Time="14:30 - 17:30" Event="Carnival 2022" Room="Multi-fuctional Exhibition Center" Place="Songshan Cultural and Creative Park"/>
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>

@@ -2,7 +2,11 @@
 import React from 'react';
 import { Accordion } from 'react-bootstrap';
 import { getCookie } from '../../tools/cookie';
-import  EventComponent from './EventComponent';
+import LunchComponent from './LunchComponent';
+import KeynoteComponent from './KeynoteComponent';
+import MentorComponent from './MentorComponent';
+import WorkComponent from './WorkComponent';
+import PanelComponent from './PanelComponent';
 import "./Schedule.css"
 
 const DailyInfo3 = (props: any) => {
@@ -13,11 +17,11 @@ const DailyInfo3 = (props: any) => {
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>Your Day {props.day} Schedule</Accordion.Header>
                     <Accordion.Body>
-                        <EventComponent Time="9:00 - 12:00" Event="Opening Ceremony" Room="101" Place="Gong-Tong Teaching Building" Color="blue"/>
-                        <EventComponent Time="12:00 - 13:00" Event="Action Project" Room="101" Place="Gong-Tong Teaching Building" Color="blue-green"/>
-                        <EventComponent Time="13:00 - 14:00" Event="Culture Festival" Room="101" Place="Gong-Tong Teaching Building" Color="green"/>
-                        <EventComponent Time="14:00 - 16:00" Event="Panel Discussion" Room="101" Place="Gong-Tong Teaching Building" Color="purple"/>
-                        <EventComponent Time="16:00 - 17:00" Event="Break" Room="International Conference Room" Place="Main Library" Color="black"/>
+                        <KeynoteComponent Time="9:00 - 11:00" Event="Keynote Speech" Place={props.Day3Speech}  Topic={props.Speech2}/>
+                        <PanelComponent Time="11:00 - 12:00" Event="Panel Discussion" Place={props.Day3Speech} />
+                        <LunchComponent Time="12:15 - 12:50" Event="Lunch Break" Room={props.Day3Lunch} Place="Zonghe Lecture Building" />
+                        <WorkComponent Time="13:00 - 15:00" Event="Workshop" Topic={props.WorkshopTopic} Room={props.Day3Workshop} Place="Zonghe Lecture Building" />
+                        <MentorComponent Time="15:00 - 17:00" Event="Mentor Discussion" Room={props.Day3Mentor} Place="Zonghe Lecture Building"/>
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>

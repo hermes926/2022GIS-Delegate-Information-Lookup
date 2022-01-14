@@ -1,9 +1,9 @@
 import React from 'react';
 import { Card, Table} from 'react-bootstrap';
 import { getCookie } from '../../tools/cookie';
-import "./Schedule.css"
+import "./Schedule.css";
 
-const PersonInfo = () => {
+const PersonInfo = (props: any) => {
     const Code = getCookie("GISCode");
     return (
         <>
@@ -17,24 +17,20 @@ const PersonInfo = () => {
                 </thead>
                 <tbody>
                     <tr>
-                    <td>Name</td>
-                    <td>Albert Lin</td>
+                        <td>Name</td>
+                        <td>{props.Name}</td>
                     </tr>
                     <tr>
-                    <td>Action Project</td>
-                    <td>Green Hunting</td>
+                        <td>Action Project Topic</td>
+                        <td>{props.Topic}</td>
                     </tr>
                     <tr>
-                    <td>Team</td>
-                    <td>A-05</td>
+                        <td>Team</td>
+                        <td>{props.Team}</td>
                     </tr>
                     <tr>
-                    <td>Dietary Restrictions</td>
-                    <td>None</td>
-                    </tr>
-                    <tr>
-                    <td>Accomodation</td>
-                    <td>No</td>
+                        <td>Dietary Restrictions</td>
+                        <td>{props.Diet}</td>
                     </tr>
                     
                 </tbody>

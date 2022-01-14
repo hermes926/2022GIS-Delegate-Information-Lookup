@@ -4,7 +4,7 @@ import { Accordion } from 'react-bootstrap';
 import { getCookie } from '../../tools/cookie';
 import "./Schedule.css"
 
-const EventComponent = (props: any) => {
+const MentorComponent = (props: any) => {
     const Code = getCookie("GISCode");
     return (
         <>
@@ -20,6 +20,6 @@ const EventComponent = (props: any) => {
     );
 };
 
-export default EventComponent;
+export default MentorComponent;
 
 
