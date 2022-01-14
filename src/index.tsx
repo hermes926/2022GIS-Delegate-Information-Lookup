@@ -5,12 +5,12 @@ import Schedule from './pages/Schedule/Schedule';
 import Header from './pages/Header/header';
 import Map from './pages/Map/Map';
 import Signin from './pages/Signin/Signin';
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { HashRouter, Route, Routes, Navigate } from "react-router-dom";
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
-    <BrowserRouter>
+    <HashRouter>
       <Header />
       <Routes>
         <Route path="/" element={<Login />} />
@@ -18,7 +18,7 @@ ReactDOM.render(
         <Route path="info/*" element={<Schedule />} />
         <Route path="map" element={<Map />} />
       </Routes>
-    </BrowserRouter>,
+    </HashRouter>,
   document.getElementById('root')
 );
 

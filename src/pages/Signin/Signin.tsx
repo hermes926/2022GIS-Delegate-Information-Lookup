@@ -10,7 +10,7 @@ class Signin extends React.Component<{}, SigninState> {
   constructor(props: SigninState) {
     super(props);
     this.setState({
-      GISCode: undefined
+      GISCode: undefined,
     });
   }
 

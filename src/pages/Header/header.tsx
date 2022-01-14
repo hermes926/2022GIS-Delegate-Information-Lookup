@@ -21,13 +21,13 @@ const Header = () => {
                                 <Nav.Link href="/announce">Announements</Nav.Link> */}
                             {/* </Nav.Item> */}
                             <Nav.Item style={{ marginLeft: '1%' }}>
-                                <Nav.Link href="/signin">{"SignIn"}</Nav.Link>
+                                <Nav.Link href="#/signin">{"SignIn"}</Nav.Link>
                             </Nav.Item>
                             <Nav.Item style={{ marginLeft: '1%' }}>
-                                <Nav.Link href="/info">Schedule</Nav.Link>
+                                <Nav.Link href="#/info">Schedule</Nav.Link>
                             </Nav.Item>
                             <Nav.Item style={{ marginLeft: '1%' }}>
-                                <Nav.Link href="/map">Map</Nav.Link>
+                                <Nav.Link href="#/map">Map</Nav.Link>
                             </Nav.Item>
                         </Nav>
                     </Navbar.Collapse>
