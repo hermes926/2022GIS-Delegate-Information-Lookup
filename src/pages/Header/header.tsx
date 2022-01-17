@@ -17,17 +17,17 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
+                            {/* <Nav.Item style={{ marginLeft: '1%' }}>
+                                <Nav.Link href="/announce">Announements</Nav.Link> */}
+                            {/* </Nav.Item> */}
                             <Nav.Item style={{ marginLeft: '1%' }}>
-                                <Nav.Link href="/lending">Announements</Nav.Link>
+                                <Nav.Link href="#/signin">{"SignIn"}</Nav.Link>
                             </Nav.Item>
                             <Nav.Item style={{ marginLeft: '1%' }}>
-                                <Nav.Link href="/home">{"SignIn"}</Nav.Link>
+                                <Nav.Link href="#/info">Schedule</Nav.Link>
                             </Nav.Item>
                             <Nav.Item style={{ marginLeft: '1%' }}>
-                                <Nav.Link href="/info">Schedule</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item style={{ marginLeft: '1%' }}>
-                                <Nav.Link href="/map">Map</Nav.Link>
+                                <Nav.Link href="#/map">Map</Nav.Link>
                             </Nav.Item>
                         </Nav>
                     </Navbar.Collapse>

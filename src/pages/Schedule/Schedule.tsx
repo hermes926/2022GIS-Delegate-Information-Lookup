@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Navigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { Container, Row } from 'react-bootstrap';
 import { getCookie } from '../../tools/cookie';
 import './Schedule.css';
@@ -35,12 +35,13 @@ class DelegateInfo {
 interface SchedulePageState {
   Code: string | undefined,
   Info: DelegateInfo | undefined;
+  redirect: string | undefined,
 }
 
 class Schedule extends React.Component<{}, SchedulePageState> {
   constructor(props: SchedulePageState) {
     super(props);
-    this.state = { Code: undefined, Info: undefined };
+    this.state = { Code: undefined, Info: undefined, redirect: undefined, };
   }
 
   componentDidMount = () => {
@@ -85,8 +86,10 @@ class Schedule extends React.Component<{}, SchedulePageState> {
 
         this.setState({Info: Info, Code: Info.Code});
       }else{
+        alert("Please enter a valid GIS code!");
+        this.setState({redirect: "/"});
         this.setState({Code: undefined});
-        alert("Invalid GIScode!\n");
+        
       }
       console.log(rows);
     }
@@ -94,9 +97,9 @@ class Schedule extends React.Component<{}, SchedulePageState> {
 
   render(){
     // console.log(this.state.redirect);
-    // if (this.state.redirect) {
-    //   return <Navigate to={this.state.redirect} />;
-    // }
+    if (this.state.redirect) {
+      return <Navigate to={this.state.redirect} />;
+    }
     const Code = this.state.Code;
     const Info = this.state.Info;
     console.log(Info);
