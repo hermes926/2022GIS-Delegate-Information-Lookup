@@ -12,3 +12,13 @@
   width: 100%;
 }
 
+.mimg {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+
+.s-modal {
+  width:90%;
+}

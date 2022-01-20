@@ -1,7 +1,8 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Modal } from 'react-bootstrap';
 import { getCookie } from '../../tools/cookie';
+import p1 from '../../images/modal_banner/1.jpg';
 import './Schedule.css';
 import PersonInfo from './PersonInfo';
 import DailyInfo1 from './DailyInfo1';
@@ -34,20 +35,25 @@ class DelegateInfo {
 
 interface SchedulePageState {
   Code: string | undefined,
-  Info: DelegateInfo | undefined;
+  Info: DelegateInfo | undefined,
   redirect: string | undefined,
+  show: boolean
 }
 
 class Schedule extends React.Component<{}, SchedulePageState> {
   constructor(props: SchedulePageState) {
     super(props);
-    this.state = { Code: undefined, Info: undefined, redirect: undefined, };
+    this.state = { Code: undefined, Info: undefined, redirect: undefined, show: true};
   }
 
   componentDidMount = () => {
     const Code = getCookie('GISCode');
     this.setState({Code: Code});
     this.Readdata();
+  }
+
+  handleClose = (event: any) => {
+    this.setState({show: false});
   }
 
   Readdata = async () => {  
@@ -131,6 +137,14 @@ class Schedule extends React.Component<{}, SchedulePageState> {
           <Row className='py-2 px-2'>
             <DailyInfo5 day={5} Day5Lunch={Info?.day5Lunch}/>
           </Row>
+          <Modal show={this.state.show} onHide={this.handleClose} className="s-modal" >
+          {/* <Modal.Header closeButton></Modal.Header> */}
+          <Modal.Body>
+            <a href="https://www.doughnut.com.tw/pages/about-doughnut?utm_source=gis_manual&utm_medium=ads&utm_campaign=2022_gis&utm_content=full_page_ads">
+              <img src={p1} className="mimg" />
+            </a>
+          </Modal.Body>
+          </Modal>
           
         </Container>
       );
