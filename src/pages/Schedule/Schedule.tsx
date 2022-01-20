@@ -31,6 +31,14 @@ class DelegateInfo {
     day3Lunch: string | undefined;
     day4Lunch: string | undefined;
     day5Lunch: string | undefined;
+    CF1: string | undefined;
+    CF2: string | undefined;
+    CF3: string | undefined;
+    Banquet: string | undefined;
+    LD1: string | undefined;
+    LD2: string | undefined;
+    LD3: string | undefined;
+    Bus: string | undefined;
 }
 
 interface SchedulePageState {
@@ -67,7 +75,7 @@ class Schedule extends React.Component<{}, SchedulePageState> {
     });
     await doc.loadInfo(); // loads document properties and worksheets
     if(doc){ 
-      const sheet = doc.sheetsByIndex[0];
+      const sheet = doc.sheetsByIndex[2];
       var rows = await sheet.getRows();
       rows = rows.filter((row: any) => {return (row.GISCode === this.state.Code);});
       if(rows.length === 1){
@@ -91,6 +99,14 @@ class Schedule extends React.Component<{}, SchedulePageState> {
         Info.day3Lunch = rows[0].Day3Lunch;
         Info.day4Lunch = rows[0].Day4Lunch;
         Info.day5Lunch = rows[0].Day5Lunch;
+        Info.CF1 = rows[0].Day1CF1;
+        Info.CF2 = rows[0].Day1CF2;
+        Info.CF3 = rows[0].Day1CF3;
+        Info.Banquet = rows[0].Banquet;
+        Info.LD1 = rows[0].LD1;
+        Info.LD2 = rows[0].LD2;
+        Info.LD3 = rows[0].LD3;
+        Info.Bus = rows[0].Bus;
 
         this.setState({Info: Info, Code: Info.Code});
       }else{
@@ -125,16 +141,16 @@ class Schedule extends React.Component<{}, SchedulePageState> {
             <PersonInfo Name={Info?.Name} Topic={Info?.Topic} Team={Info?.Team} Diet={Info?.Diet}/>
           </Row>
           <Row className='py-2 px-2'>
-            <DailyInfo1 day={1} Day1Lunch={Info?.day1Lunch} Day1mentor={Info?.day1Mentor} />
+            <DailyInfo1 day={1} Day1Lunch={Info?.day1Lunch} Day1mentor={Info?.day1Mentor} CF1={Info?.CF1} CF2={Info?.CF2} CF3={Info?.CF3} />
           </Row>
           <Row className='py-2 px-2'>
-            <DailyInfo2 day={2} Speech1={Info?.speech1} Day2Speech={Info?.day2Speech}/>
+            <DailyInfo2 day={2} Day2Lunch={Info?.day2Lunch} Speech1={Info?.speech1} Day2Speech={Info?.day2Speech} Bus={Info?.Bus}/>
           </Row>
           <Row className='py-2 px-2'>
             <DailyInfo3 day={3} Speech2={Info?.speech2} Day3Speech={Info?.day3Speech} Day3Lunch={Info?.day3Lunch} Day3Mentor={Info?.day3Mentor} Day3Workshop={Info?.day3Workshop} />
           </Row>
           <Row className='py-2 px-2'>
-            <DailyInfo4 day={4}/>
+            <DailyInfo4 day={4} Banquet={Info?.Banquet} LD1={Info?.LD1} LD2={Info?.LD2} LD3={Info?.LD3} Bus={Info?.Bus} />
           </Row>
           <Row className='py-2 px-2'>
             <DailyInfo5 day={5} Day5Lunch={Info?.day5Lunch}/>

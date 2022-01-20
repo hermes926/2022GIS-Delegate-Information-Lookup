@@ -12,7 +12,7 @@ const LunchComponent = (props: any) => {
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>{props.Time} {props.Event}</Accordion.Header>
                     <Accordion.Body className={props.Place}>
-                       At {props.Room}, {props.Place}
+                       At {props.Room}
                     </Accordion.Body>
 
                 </Accordion.Item>

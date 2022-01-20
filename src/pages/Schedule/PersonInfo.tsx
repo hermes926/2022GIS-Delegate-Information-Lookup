@@ -21,10 +21,6 @@ const PersonInfo = (props: any) => {
                         <td>{props.Name}</td>
                     </tr>
                     <tr>
-                        <td>Action Project Topic</td>
-                        <td>{props.Topic}</td>
-                    </tr>
-                    <tr>
                         <td>Team</td>
                         <td>{props.Team}</td>
                     </tr>

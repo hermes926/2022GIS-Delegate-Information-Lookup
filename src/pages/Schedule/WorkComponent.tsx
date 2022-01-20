@@ -12,8 +12,7 @@ const WorkComponent = (props: any) => {
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>{props.Time} {props.Event}</Accordion.Header>
                     <Accordion.Body className={props.Place}>
-                        Topic: {props.Topic} <br />
-                        At {props.Room}, {props.Place} <br />
+                        At {props.Room} <br />
                     </Accordion.Body>
 
                 </Accordion.Item>

@@ -44,7 +44,7 @@ class Login extends React.Component<{}, LoginPageState> {
                 <Form.Group controlId="exampleForm.ControlInput1">
                   <Form.Control 
                     type="string" 
-                    placeholder="GIS___"
+                    placeholder="G22___"
                     onChange={(e) => this.handleChange(e)}
                     />
                 </Form.Group>

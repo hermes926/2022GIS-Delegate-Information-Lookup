@@ -20,7 +20,7 @@ const DailyInfo3 = (props: any) => {
                         <KeynoteComponent Time="9:00 - 11:00" Event="Keynote Speech" Place={props.Day3Speech}  Topic={props.Speech2}/>
                         <PanelComponent Time="11:00 - 12:00" Event="Panel Discussion" Place={props.Day3Speech} />
                         <LunchComponent Time="12:15 - 12:50" Event="Lunch Break" Room={props.Day3Lunch} Place="Zonghe Lecture Building" />
-                        <WorkComponent Time="13:00 - 15:00" Event="Workshop" Topic={props.WorkshopTopic} Room={props.Day3Workshop} Place="Zonghe Lecture Building" />
+                        <WorkComponent Time="13:00 - 15:00" Event="Workshop" Room={props.Day3Workshop} Place="Zonghe Lecture Building" />
                         <MentorComponent Time="15:00 - 17:00" Event="Mentor Discussion" Room={props.Day3Mentor} Place="Zonghe Lecture Building"/>
                     </Accordion.Body>
                 </Accordion.Item>
