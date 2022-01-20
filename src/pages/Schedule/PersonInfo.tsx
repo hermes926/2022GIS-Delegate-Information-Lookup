@@ -9,7 +9,7 @@ const PersonInfo = (props: any) => {
         <>
             <Card body className="card">
             <Table striped bordered hover>
-                <thead>
+                <thead className="title">
                     <tr>
                     <td>GIS Code</td>
                     <td>{Code}</td>

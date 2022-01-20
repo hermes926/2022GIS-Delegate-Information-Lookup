@@ -117,7 +117,7 @@ class Schedule extends React.Component<{}, SchedulePageState> {
       return (
         <Container className='APP container'>
           <Row >
-            <h2 className='title px-2 py-2'> Hi {Info?.Name}</h2>
+            <h2 className='title px-2 py-2'> Hello {Info?.Name}</h2>
           </Row>
           <Row className='py-2 px-2'>
             <PersonInfo Name={Info?.Name} Topic={Info?.Topic} Team={Info?.Team} Diet={Info?.Diet}/>
