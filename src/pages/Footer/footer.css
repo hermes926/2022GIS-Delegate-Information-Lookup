@@ -10,7 +10,8 @@
 
 .fimg {
   display: block;
-  height: 9vh;
+  max-height: 9vh;
+  max-width: 100%;
   margin: auto;
 }
 /* 

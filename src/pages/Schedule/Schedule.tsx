@@ -57,7 +57,7 @@ class Schedule extends React.Component<{}, SchedulePageState> {
 
   componentDidMount = () => {
     const Code = getCookie('GISCode');
-    const imgid = Math.floor(Math.random() * 5);
+    const imgid = Math.floor(Math.random() * 7);
     this.setState({Code: Code, imgid: imgid});
     this.Readdata();
   }
