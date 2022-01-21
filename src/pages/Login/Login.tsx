@@ -1,6 +1,6 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
-import { Container, Card, Form, Row, Col, Button } from 'react-bootstrap';
+import { Container, Card, Form, Row, Col, Button, Modal } from 'react-bootstrap';
 import { getCookie, setCookie } from "../../tools/cookie";
 import './Login.css';
 
@@ -44,7 +44,7 @@ class Login extends React.Component<{}, LoginPageState> {
                 <Form.Group controlId="exampleForm.ControlInput1">
                   <Form.Control 
                     type="string" 
-                    placeholder="GIS___"
+                    placeholder="G22___"
                     onChange={(e) => this.handleChange(e)}
                     />
                 </Form.Group>
@@ -56,8 +56,11 @@ class Login extends React.Component<{}, LoginPageState> {
             </Row>
           </Card>
         </Row>
+
         
       </Container>
+      
+
     );
   }
 }

@@ -1,0 +1,29 @@
+.Footer {
+  position: fixed;
+  /* position: relative; */
+  padding: 1vh 0vw 1vh 0vw;
+  bottom: 0;
+  width: 100%;
+  height: 10vh;
+  background-color: white;
+}
+
+.fimg {
+  display: block;
+  max-height: 9vh;
+  max-width: 100%;
+  margin: auto;
+}
+/* 
+.cimg {
+  display: block;
+  height: 1vh;
+  margin-left: auto;
+} */
+
+.cimg {
+  position: absolute;
+  top: 0;
+  right: 1vw;
+  height: 1vh;
+}

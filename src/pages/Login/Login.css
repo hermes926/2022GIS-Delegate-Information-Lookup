@@ -1,14 +1,24 @@
 .APP {
-  font-family: Georgia, serif;
+  font-family: Verdana, sans-serif;
   padding-top: 2%;
   /* background-color: rgb(31, 76, 129); */
 }
 
 .container {
-  width: 80%;
+  width: 90%;
 }
 
 .card {
   width: 100%;
 }
 
+.mimg {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+
+.s-modal {
+  width: 100%;
+}
